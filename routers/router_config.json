@@ -1,0 +1,84 @@
+[
+    {
+        "path": "/test",
+        "modules": {
+            "hd": [
+                {
+                    "main": []
+                }
+            ],
+            "bd": [
+                {
+                    "main": [
+                        {
+                            "project_name": "amodvis_company",
+                            "module_name": "Solution",
+                            "page_name": "two",
+                            "position": "1",
+                            "module_data": {
+                                "room_list": [],
+                                "msg_list": [],
+                                "user_info": {
+                                    "user_id": 1,
+                                    "user_name": "user_1",
+                                    "head_pic": "https://static-upload.local.com/amodvis/static/image/14/9c/ff/149cffa10522fed6855612a647924663.jpeg"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "ft": [
+                {
+                    "main": []
+                }
+            ]
+        },
+        "is_pull_update": false,
+        "is_hide_page": false,
+        "is_pre_load": false,
+        "is_cdn_cache": false,
+        "is_user_auth": 1
+    },
+    {
+        "path": "/index",
+        "modules": {
+            "hd": [
+                {
+                    "main": []
+                }
+            ],
+            "bd": [
+                {
+                    "main": [
+                        {
+                            "project_name": "amodvis_company",
+                            "module_name": "Header",
+                            "page_name": "one",
+                            "position": "1",
+                            "module_data": {
+                                "room_list": [],
+                                "msg_list": [],
+                                "user_info": {
+                                    "user_id": 1,
+                                    "user_name": "user_1",
+                                    "head_pic": "https://static-upload.local.com/amodvis/static/image/14/9c/ff/149cffa10522fed6855612a647924663.jpeg"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "ft": [
+                {
+                    "main": []
+                }
+            ]
+        },
+        "is_pull_update": true,
+        "is_hide_page": false,
+        "is_pre_load": false,
+        "is_cdn_cache": false,
+        "is_user_auth": 1
+    }
+]
