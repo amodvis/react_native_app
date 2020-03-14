@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import * as B from '../../block';
 import { View } from 'react-native';
-const envJson = require('../../.env.json');
-
+const envJson = require('../../env.json');
 const cre = React.createElement;
 
 class CommonPage extends Component {
