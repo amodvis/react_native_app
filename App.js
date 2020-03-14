@@ -89,13 +89,6 @@ function renderRouterConfigV4(router, contextPath) {
         screenProps={{ "data": routeItem.modules, "is_cdn_cache": routeItem.is_cdn_cache, "is_user_auth": routeItem.is_user_auth, "is_pull_update": routeItem.is_pull_update }}
       />
     );
-    // 存在子路由，递归当前路径，并添加到路由中
-    if (Array.isArray(routeItem.childRoutes)) {
-      routeItem.childRoutes.forEach((r) => {
-        // 递归传递当前 route.component 作为子节点的 container
-        renderRoute(r, routePath);
-      });
-    }
   };
   router.forEach((r) => {
     renderRoute(r, contextPath);
@@ -103,9 +96,72 @@ function renderRouterConfigV4(router, contextPath) {
   return <Stack key="root">{routeChildren}</Stack>;
 }
 const routerWithReactRouter4 = recursiveRouterConfigV4(routerConfig);
+// {renderRouterConfigV4(routerWithReactRouter4, '/')}
+
 const App = () => (
   <Router>
-    {renderRouterConfigV4(routerWithReactRouter4, '/')}
+    <Scene key='root'>
+      <Scene
+        key="/footer"
+        path="/footer"
+        component={B.amodvis_company.Footer}
+        title="PageThree"
+      />
+      <Scene initial hideNavBar tabBarPosition="bottom">
+        <Tabs
+          key="tabbar"
+          swipeEnabled
+          wrap={false}
+          // 是否显示标签栏文字
+          showLabel={false}
+          tabBarStyle={{ backgroundColor: "#eee" }}
+          //tab选中的颜色
+          activeBackgroundColor="white"
+          //tab没选中的颜色
+          inactiveBackgroundColor="red"
+        >
+          <Scene
+            key="/test"
+            path="/test"
+            component={B.amodvis_company.Header}
+            title="PageOne"
+          />
+          <Scene
+            key="/index"
+            path="/index"
+            component={B.amodvis_company.Solution}
+            title="PageTwo"
+          />
+        </Tabs>
+      </Scene>
+      <Scene hideNavBar tabBarPosition="bottom">
+        <Tabs
+          key="tabbar"
+          swipeEnabled
+          wrap={false}
+          // 是否显示标签栏文字
+          showLabel={false}
+          tabBarStyle={{ backgroundColor: "#eee" }}
+          //tab选中的颜色
+          activeBackgroundColor="white"
+          //tab没选中的颜色
+          inactiveBackgroundColor="green"
+        >
+          <Scene
+            key="/tab_b/test"
+            path="/tab_b/test"
+            component={B.amodvis_company.Header}
+            title="tab_b test"
+          />
+          <Scene
+            key="/tab_b/index"
+            path="/tab_b/index"
+            component={B.amodvis_company.Solution}
+            title="tab_b index"
+          />
+        </Tabs>
+      </Scene>
+    </Scene>
   </Router>
 );
 

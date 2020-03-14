@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function CommonHeader(props) {
+export default function CommonFooter(props) {
   debugger
   console.log(props)
   const mockData = props.module_data;
@@ -101,7 +101,7 @@ export default function CommonHeader(props) {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.engine}>
-            <Text style={styles.footer}>Engine: 444</Text>
+            <Text style={styles.footer}>Footer</Text>
           </View>
           <View style={{ margin: 128 }}>
             <Text onPress={Actions['/test']}>
@@ -111,11 +111,6 @@ export default function CommonHeader(props) {
           <View style={{ margin: 128 }}>
             <Text onPress={Actions['/index']}>
               /index
-          </Text>
-          </View>
-          <View style={{ margin: 128 }}>
-            <Text onPress={Actions['/footer']}>
-              /footer
           </Text>
           </View>
           <View style={{ margin: 128 }}>

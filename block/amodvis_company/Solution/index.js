@@ -95,22 +95,29 @@ export default function Solution(props) {
   }, [expandedKeys]);
   return (
     <>
-      <View style={styles.sectionContainer}>
-        <Text style={styles.sectionTitle}>Learn More</Text>
-        <Text style={styles.sectionDescription}>
-          Read the docs to discover what to do next:
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView>
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={styles.scrollView}>
+          <View style={styles.sectionContainer}>
+            <Text style={styles.sectionTitle}>Learn More</Text>
+            <Text style={styles.sectionDescription}>
+              Read the docs to discover what to do next:
                 </Text>
-        <View style={{ margin: 128 }}>
-          <Text onPress={Actions['/test']}>
-            /test
+            <View style={{ margin: 128 }}>
+              <Text onPress={Actions['/test']}>
+                /test
           </Text>
-        </View>
-        <View style={{ margin: 128 }}>
-          <Text onPress={Actions['/index']}>
-            /index
+            </View>
+            <View style={{ margin: 128 }}>
+              <Text onPress={Actions['/index']}>
+                /index
           </Text>
-        </View>
-      </View>
+            </View>
+          </View>
+        </ScrollView>
+      </SafeAreaView>
     </>
   );
 }
